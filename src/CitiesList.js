@@ -2,18 +2,28 @@ import React, { Component } from 'react';
 import City from './City';
 import { Link, Route } from 'react-router-dom';
 import Map from './Map';
+import BookList from './BooksList';
+
+const books = [
+  { name: 'Book1', author: 'Author 1' },
+  { name: 'Book2', author: 'Author 2 Long NAme' },
+  { name: 'Book3', author: 'Author 3 Long NAme Long' },
+  { name: 'Book4 nameee ndnfad', author: 'Author 4 Long NAme Long' },
+  { name: 'Book5nameeeeeeeeeeee', author: 'Author 5 Long NAme Long' },
+  { name: 'Book6', author: 'Author 6' },
+];
 
 class CitiesList extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      showBooklist: false,
+      isBooklist: false,
     };
   }
   handleBooklistToggle = e => {
     e.preventDefault();
-    this.setState({ showBooklist: !this.state.showBooklist }, () => {
-      console.log(this.state.showBooklist);
+    this.setState({ isBooklist: !this.state.isBooklist }, () => {
+      console.log(this.state.isBooklist);
     });
   };
   render() {
@@ -42,7 +52,13 @@ class CitiesList extends Component {
                   city => city.name === match.params.cityName,
                 )}
               />
-              <Map match={match} onBooklistToggle={this.handleBooklistToggle} />
+              {this.state.isBooklist
+                ? <BookList books={books} />
+                : <Map
+                    match={match}
+                    onBooklistToggle={this.handleBooklistToggle}
+                  />}
+
             </div>
           )}
         />

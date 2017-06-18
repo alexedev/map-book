@@ -33,12 +33,12 @@ export default class Map extends React.Component {
           service.nearbySearch(
             {
               location,
-              radius: '500',
+              radius: '100',
               type: ['cities'],
             },
             (results, status) => {
               if (status == google.maps.places.PlacesServiceStatus.OK) {
-                console.log(results[0].photos[0].getUrl({ maxWidth: 400 }));
+                console.log(results[0].photos[0].getUrl({ maxWidth: 414 }));
               }
             },
           );
