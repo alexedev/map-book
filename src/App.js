@@ -8,7 +8,7 @@ import { Route } from 'react-router-dom';
 import Search from './Search';
 
 const cities = [
-  { name: 'London', country: 'UK', books: 1, places: 9 },
+  { name: 'London', country: 'UK', books: 6, places: 64 },
   { name: 'Paris', country: 'France', books: 4, places: 27 },
   { name: 'Prague', country: 'Czech Republic', books: 4, places: 41 },
   { name: 'Berlin', country: 'Germany', books: 1, places: 4 },
