@@ -112,13 +112,18 @@ export default class Map extends React.Component {
     };
 
     return (
-      <div style={{ position: 'relative' }}>
-        <div ref="map" style={mapStyle} />
-        <Button
-          onBooklistToggle={this.props.onBooklistToggle}
-          icon="book"
-          text="List of books on this map"
-        />
+      <div>
+        <div style={{ position: 'relative' }}>
+          <div ref="map" style={mapStyle} />
+          <Button
+            onBooklistToggle={this.props.onBooklistToggle}
+            icon="book"
+            text="List of books on this map"
+          />
+        </div>
+        <a href="#" className="button" style={{position:'absolute',bottom:'10em',left:'10em'}}>
+            <i className="fa fa-plane" aria-hidden="true"></i> Flight to {this.props.match.params.cityName} from $50
+        </a>
       </div>
     );
   }
