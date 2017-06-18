@@ -46,24 +46,6 @@ class CityPreview extends Component {
       }
     });
   }
-  componentWillMount() {
-    fetch(
-      `https://mapbook.scalingo.io/flightprice?destination=${this.props.city.name}`,
-      {
-        method: 'GET',
-        headers: {
-          Accept: 'application/json',
-        },
-      },
-    ).then(response => {
-      console.log(response);
-      if (response.ok) {
-        response.json().then(json => {
-          console.log(json);
-        });
-      }
-    });
-  }
 
   render() {
     const styleForImage = {

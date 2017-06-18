@@ -10,7 +10,26 @@ export default class Map extends React.Component {
     super(props);
     this.state = {
       places: null,
+      price: '?',
     };
+  }
+  componentWillMount() {
+    fetch(
+      `https://mapbook.scalingo.io/flightprice?destination=${this.props.match.params.cityName}`,
+      {
+        method: 'GET',
+        headers: {
+          Accept: 'application/json',
+        },
+      },
+    ).then(response => {
+      console.log(response);
+      if (response.ok) {
+        response.json().then(json => {
+          this.setState({ price: json });
+        });
+      }
+    });
   }
   componentDidMount() {
     fetch(
@@ -99,8 +118,18 @@ export default class Map extends React.Component {
             text="List of books on this map"
           />
         </div>
-        <a href="#" className="button" style={{position:'absolute',bottom:'10em',left:'10em'}}>
-            <i className="fa fa-plane" aria-hidden="true"></i> Flight to {this.props.match.params.cityName} from $50
+        <a
+          href="#"
+          className="button"
+          style={{ position: 'absolute', bottom: '10em', left: '10em' }}
+        >
+          <i className="fa fa-plane" aria-hidden="true" />
+          {' '}
+          Flight to
+          {' '}
+          {this.props.match.params.cityName}
+          {' '}
+          from {this.state.price}
         </a>
       </div>
     );

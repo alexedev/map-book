@@ -9,7 +9,9 @@ const BookList = props => (
     ))}
 
     <div style={{ textAlign: 'center', margin: '20px' }}>
-      <div className="button button-inverted">close list of books</div>
+      <div onClick={props.onBooklistToggle} className="button button-inverted">
+        close list of books
+      </div>
     </div>
   </div>
 );

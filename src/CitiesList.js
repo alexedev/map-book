@@ -51,7 +51,10 @@ class CitiesList extends Component {
                 )}
               />
               {this.state.isBooklist
-                ? <BookList books={books} />
+                ? <BookList
+                    books={books}
+                    onBooklistToggle={this.handleBooklistToggle}
+                  />
                 : <Map
                     match={match}
                     onBooklistToggle={this.handleBooklistToggle}
