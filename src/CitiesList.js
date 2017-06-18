@@ -6,45 +6,41 @@ import BookList from './BooksList';
 
 const books = [
   {
-    "cover":"https://images.gr-assets.com/books/1344922523l/1953.jpg",
-    "author":"Charles Dickens",
-    "name":"A Tale of Two Cities"
+    cover: 'https://images.gr-assets.com/books/1344922523l/1953.jpg',
+    author: 'Charles Dickens',
+    name: 'A Tale of Two Cities',
   },
   {
-    "cover":"https://images.gr-assets.com/books/1327868529l/18254.jpg",
-    "author":"Charles Dickens",
-    "name":"Oliver Twist"
+    cover: 'https://images.gr-assets.com/books/1327868529l/18254.jpg',
+    author: 'Charles Dickens',
+    name: 'Oliver Twist',
   },
   {
-    "cover":"https://images.gr-assets.com/books/1397245675l/14935.jpg",
-    "author":"Jane Austen",
-    "name":"Sense and Sensibility"
+    cover: 'https://images.gr-assets.com/books/1397245675l/14935.jpg',
+    author: 'Jane Austen',
+    name: 'Sense and Sensibility',
   },
   {
-    "cover":"https://images.gr-assets.com/books/1327920219l/2623.jpg",
-    "author":"Charles Dickens",
-    "name":"Great Expectations"
+    cover: 'https://images.gr-assets.com/books/1327920219l/2623.jpg',
+    author: 'Charles Dickens',
+    name: 'Great Expectations',
   },
   {
-    "cover":"https://images.gr-assets.com/books/1424596966l/5297.jpg",
-    "author":"Oscar Wilde",
-    "name":"The Picture of Dorian Gray"
+    cover: 'https://images.gr-assets.com/books/1424596966l/5297.jpg',
+    author: 'Oscar Wilde',
+    name: 'The Picture of Dorian Gray',
   },
   {
-    "cover":"https://images.gr-assets.com/books/1355929358l/8921.jpg",
-    "author":"Arthur Conan Doyle",
-    "name":"The Hound of the Baskervilles (Sherlock Holmes #5)"
+    cover: 'https://images.gr-assets.com/books/1355929358l/8921.jpg',
+    author: 'Arthur Conan Doyle',
+    name: 'The Hound of the Baskervilles',
   },
   {
-    "cover":"https://images.gr-assets.com/books/1318116526l/51496.jpg",
-    "author":"Robert Louis Stevenson",
-    "name":"The Strange Case of Dr. Jekyll and Mr. Hyde"
-  }
+    cover: 'https://images.gr-assets.com/books/1318116526l/51496.jpg',
+    author: 'Robert Louis Stevenson',
+    name: 'The Strange Case of Dr. Jekyll and Mr. Hyde',
+  },
 ];
-
-
-
-
 
 class CitiesList extends Component {
   constructor(props) {
