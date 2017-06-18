@@ -28,6 +28,9 @@ class App extends Component {
     e.preventDefault();
     this.setState({ query: e.target.value });
   };
+  componentWillMount() {
+    this.setState({ query: null });
+  }
   render() {
     const re = RegExp(this.state.query, 'i');
 
