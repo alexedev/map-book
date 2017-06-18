@@ -49,7 +49,7 @@ export default class Map extends React.Component {
   render() {
     const mapStyle = {
       width: '100%',
-      height: '470px',
+      height: '540px',
       border: 'none',
     };
 

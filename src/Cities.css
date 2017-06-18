@@ -72,3 +72,14 @@
   color: #fff;
   line-height: 45px;
 }
+
+.button--back {
+      float: left;
+      color: #fff;
+      font-family: 'Open Sans', sans-serif;
+      text-decoration: none;
+      position: absolute;
+      top: 15px;
+      left: 10px;
+      font-size: 12px;
+    }

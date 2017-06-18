@@ -60,6 +60,14 @@ class CityPreview extends Component {
         {fullView &&
           <div className="block--header block--header_transparent">
             <div className="block--header_title">BookTourist</div>
+            <Link to="/">
+              <a href="#" className="button--back">
+                <i className="fa fa-chevron-left" aria-hidden="true" />
+                {' '}
+                Back to cities
+              </a>
+            </Link>
+
           </div>}
         <div className="block--city_name">
           <h2 className="header">
