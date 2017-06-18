@@ -36,7 +36,6 @@ class CityPreview extends Component {
             },
             (results, status) => {
               if (status == google.maps.places.PlacesServiceStatus.OK) {
-                console.log(results[0].photos[0].getUrl({ maxWidth: 400 }));
                 this.setState({
                   photoUrl: results[0].photos[0].getUrl({ maxWidth: 1000 }),
                 });
@@ -47,6 +46,25 @@ class CityPreview extends Component {
       }
     });
   }
+  componentWillMount() {
+    fetch(
+      `https://mapbook.scalingo.io/flightprice?destination=${this.props.city.name}`,
+      {
+        method: 'GET',
+        headers: {
+          Accept: 'application/json',
+        },
+      },
+    ).then(response => {
+      console.log(response);
+      if (response.ok) {
+        response.json().then(json => {
+          console.log(json);
+        });
+      }
+    });
+  }
+
   render() {
     const styleForImage = {
       backgroundImage: `url(${this.state.photoUrl})`,
@@ -76,7 +94,19 @@ class CityPreview extends Component {
           <div ref="city" />
           <div className="subheader">
             <i className="fa fa-map-marker" aria-hidden="true" />
+<<<<<<< HEAD
             {' '} {this.props.city.places} places from {this.props.city.books} books
+=======
+            {' '}
+            {' '}
+            {Math.floor(Math.random() * 60)}
+            {' '}
+            places from
+            {' '}
+            {Math.floor(Math.random() * 20)}
+            {' '}
+            books
+>>>>>>> 7279adf454bdd543f83dade6e7351a303c3cde95
           </div>
           {!fullView &&
             <i

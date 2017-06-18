@@ -22,9 +22,7 @@ class CitiesList extends Component {
   }
   handleBooklistToggle = e => {
     e.preventDefault();
-    this.setState({ isBooklist: !this.state.isBooklist }, () => {
-      console.log(this.state.isBooklist);
-    });
+    this.setState({ isBooklist: !this.state.isBooklist }, () => {});
   };
   render() {
     return (

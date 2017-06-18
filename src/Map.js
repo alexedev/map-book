@@ -6,6 +6,35 @@ import { API_KEY } from './config';
 import Button from './Button';
 
 export default class Map extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      places: null,
+    };
+  }
+  componentWillMount() {
+    if (this.props.match.params.cityName === 'London') {
+      fetch('http://ea0a38c5.ngrok.io/places', {
+        method: 'GET',
+        headers: {
+          Accept: 'application/json',
+        },
+      }).then(response => {
+        response.json().then(json => {
+          this.setState(
+            {
+              places: json.filter(
+                place => place.city === this.props.match.params.cityName,
+              ),
+            },
+            () => {
+              console.log(this.state.places);
+            },
+          );
+        });
+      });
+    }
+  }
   componentDidMount() {
     fetch(
       `https://maps.googleapis.com/maps/api/geocode/json?address=${this.props.match.params.cityName}&key=${API_KEY}`,
@@ -24,11 +53,40 @@ export default class Map extends React.Component {
             zoom: 16,
             scrollwheel: false,
           });
-          var marker = new google.maps.Marker({
-            position: location,
-            map: this.map,
-            title: 'Hello World!',
-          });
+          if (this.props.match.params.cityName === 'London') {
+            fetch('http://ea0a38c5.ngrok.io/places', {
+              method: 'GET',
+              headers: {
+                Accept: 'application/json',
+              },
+            }).then(response => {
+              response.json().then(json => {
+                this.setState(
+                  {
+                    places: json.filter(
+                      place => place.city === this.props.match.params.cityName,
+                    ),
+                  },
+                  () => {
+                    if (this.state.places && this.state.places.length) {
+                      console.log(this.state.places);
+                      this.state.places.forEach(place => {
+                        const marker = new google.maps.Marker({
+                          position: {
+                            lat: place.lat,
+                            lng: place.lng,
+                          },
+                          map: this.map,
+                          title: place.name,
+                        });
+                      });
+                    }
+                  },
+                );
+              });
+            });
+          }
+
           const service = new google.maps.places.PlacesService(this.map);
           service.nearbySearch(
             {
@@ -38,7 +96,6 @@ export default class Map extends React.Component {
             },
             (results, status) => {
               if (status == google.maps.places.PlacesServiceStatus.OK) {
-                console.log(results[0].photos[0].getUrl({ maxWidth: 414 }));
               }
             },
           );
