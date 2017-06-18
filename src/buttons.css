@@ -37,8 +37,8 @@
 
     .button--map {
         position: absolute;
-        bottom: 10em;
-        left: 1em;
+        right: 1em;
+        top: 1em;
     }
 
      .button--big {
