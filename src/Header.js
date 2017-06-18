@@ -3,7 +3,7 @@ import './Header.css';
 
 const Header = props => (
   <div className="block--header">
-    <div className="block--header_title">MapBook</div>
+    <div className="block--header_title">BookTourist</div>
   </div>
 );
 

@@ -5,8 +5,8 @@ const LoginScreen = props => (
 <div className="screen--login">
 
     <div className="block--product-name">
-      <h1>MapBook</h1>
-      <div>Let books inspire your next travel</div>
+      <h1>BookTourist</h1>
+      <div>Enjoy books in new dimension</div>
     </div>
 
     <a href="#" className="button button--big">
