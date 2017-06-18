@@ -1,0 +1,39 @@
+ .button {
+      display: inline-block;
+      height: 30px;
+      background-color: #632B30;
+      text-align: center;
+      line-height: 30px;
+      color: #fff;
+      border-radius: 15px;
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 12px;
+      padding: 0 10px;
+      text-align: left;
+      min-width: 80px;
+      margin-bottom: -100px;
+      position: absolute;
+      bottom: 10em;
+      left: 1em;
+    }
+    
+    .button:hover {
+      background: #6F1820;
+    }
+    
+    .button .fa {
+      margin-right: 5px;
+    }
+    
+    .button--inverted {
+      min-width: 0;
+      background-color: transparent;
+      color: #FFF;
+      border: 1px solid #632B30;
+    }
+    
+    .button--inverted:hover {
+      background-color: #333;
+    }

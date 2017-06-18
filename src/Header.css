@@ -1,0 +1,14 @@
+.block--header {
+  display: block;
+  height: 45px;
+  background-color: rgba(99,43,48,1);
+  position: relative;
+  text-align: center;
+}  
+.block--header_title {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 45px;
+}
