@@ -40,3 +40,8 @@
         bottom: 10em;
         left: 1em;
     }
+
+     .button--big {
+         padding: 10px 20px;
+         font-size: 14px;
+     }

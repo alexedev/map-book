@@ -1,0 +1,33 @@
+.button--big {
+    padding: 10px 20px;
+    font-size: 14px;
+}
+
+
+.block--product-name {
+    display: block;
+    padding: 30px;
+    margin: 0 0 250px 0;
+    background-color: #632B30;
+    text-align: center;
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.block--product-name h1 {
+    margin: 0;
+    font-size: 48px;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.screen--login {
+    max-width: 400px;
+    height: 735px;
+    padding-top: 150px;
+    background-image: url("map-compass.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    text-align: center;
+}
