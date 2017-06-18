@@ -8,13 +8,13 @@ import { Route } from 'react-router-dom';
 import Search from './Search';
 
 const cities = [
-  { name: 'London', country: 'UK' },
-  { name: 'Paris', country: 'France' },
-  { name: 'Prague', country: 'Czech Republic' },
-  { name: 'Berlin', country: 'Germany' },
-  { name: 'Rome', country: 'Italy' },
-  { name: 'Barcelona', country: 'Spain' },
-  { name: 'Lisbon', country: 'Portugal' },
+  { name: 'London', country: 'UK', books: 1, places: 9 },
+  { name: 'Paris', country: 'France', books: 4, places: 27 },
+  { name: 'Prague', country: 'Czech Republic', books: 4, places: 41 },
+  { name: 'Berlin', country: 'Germany', books: 1, places: 4 },
+  { name: 'Rome', country: 'Italy', books: 6, places: 49 },
+  { name: 'Barcelona', country: 'Spain', books: 2, places: 11 },
+  { name: 'Lisbon', country: 'Portugal', books: 2, places: 14 }
 ];
 
 class App extends Component {

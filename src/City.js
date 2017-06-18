@@ -76,7 +76,7 @@ class CityPreview extends Component {
           <div ref="city" />
           <div className="subheader">
             <i className="fa fa-map-marker" aria-hidden="true" />
-            {' '} 25 places from 6 books
+            {' '} {this.props.city.places} places from {this.props.city.books} books
           </div>
           {!fullView &&
             <i
