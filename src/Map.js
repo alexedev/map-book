@@ -60,7 +60,7 @@ export default class Map extends React.Component {
         <Button
           onBooklistToggle={this.props.onBooklistToggle}
           icon="book"
-          text="Filter books"
+          text="List of books on this map"
         />
       </div>
     );

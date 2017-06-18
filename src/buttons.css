@@ -14,9 +14,6 @@
       text-align: left;
       min-width: 80px;
       margin-bottom: -100px;
-      position: absolute;
-      bottom: 10em;
-      left: 1em;
     }
     
     .button:hover {
@@ -36,4 +33,10 @@
     
     .button--inverted:hover {
       background-color: #333;
+    }
+
+    .button--map {
+        position: absolute;
+        bottom: 10em;
+        left: 1em;
     }
