@@ -1,10 +1,10 @@
-body {
-      background-color: #000;
+.book--list {
+  background: #000;
 }
-    
 .list--item_book-image {
   float: left;
   margin-right: 15px;
+  margin-left: 10px;
 }
 
 .list--item_book .header {
@@ -26,6 +26,7 @@ body {
 
 .list--item_book .button {
   float: right;
+  margin-right: 10px;
 }
 
 

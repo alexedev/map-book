@@ -1,4 +1,9 @@
-
+body {
+  background: url(/empty.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0px 11px;
+}
 
 .App-logo {
   height: 80px;
