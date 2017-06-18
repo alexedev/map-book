@@ -75,7 +75,7 @@ class CityPreview extends Component {
           </h2>
           <div ref="city" />
           <div className="subheader">
-            <i className="fa fa-book" aria-hidden="true" />
+            <i className="fa fa-map-marker" aria-hidden="true" />
             {' '} 25 places from 6 books
           </div>
           {!fullView &&
