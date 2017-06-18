@@ -1,5 +1,7 @@
 .book--list {
   background: #000;
+  padding-bottom: 50px;
+
 }
 .list--item_book-image {
   float: left;
