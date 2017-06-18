@@ -5,7 +5,12 @@ import './BookList.css';
 const BookList = props => (
   <div className="book--list">
     {props.books.map(book => (
-      <Book key={book.name} name={book.name} author={book.author} />
+      <Book
+        key={book.name}
+        name={book.name}
+        author={book.author}
+        cover={book.cover}
+      />
     ))}
 
     <div style={{ textAlign: 'center', margin: '20px' }}>

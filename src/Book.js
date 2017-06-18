@@ -5,7 +5,7 @@ const Book = props => (
   <div className="list--item">
     <div className="list--item_book">
       <img
-        src="https://images.gr-assets.com/books/1327868529s/18254.jpg"
+        src={props.cover}
         alt={props.name}
         className="list--item_book-image"
       />
