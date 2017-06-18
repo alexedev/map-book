@@ -50,7 +50,7 @@ export default class Map extends React.Component {
           const location = json.results[0].geometry.location;
           this.map = new google.maps.Map(this.refs.map, {
             center: location,
-            zoom: 16,
+            zoom: 11,
             scrollwheel: false,
           });
           if (this.props.match.params.cityName === 'London') {
