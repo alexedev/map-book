@@ -94,6 +94,9 @@ class CityPreview extends Component {
           <div ref="city" />
           <div className="subheader">
             <i className="fa fa-map-marker" aria-hidden="true" />
+<<<<<<< HEAD
+            {' '} {this.props.city.places} places from {this.props.city.books} books
+=======
             {' '}
             {' '}
             {Math.floor(Math.random() * 60)}
@@ -103,6 +106,7 @@ class CityPreview extends Component {
             {Math.floor(Math.random() * 20)}
             {' '}
             books
+>>>>>>> 7279adf454bdd543f83dade6e7351a303c3cde95
           </div>
           {!fullView &&
             <i
