@@ -1,0 +1,85 @@
+body {
+      background-color: #000;
+}
+    
+.list--item_book-image {
+  float: left;
+  margin-right: 15px;
+}
+
+.list--item_book .header {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+  color: #fff;
+  text-decoration: none;
+}
+
+.list--item_book .subheader {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0;
+  color: #A0A0A0;
+}
+
+.list--item_book .button {
+  float: right;
+}
+
+
+.list--item {
+  border-bottom: 1px solid #2F2F2F;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.list--item:last-child {
+  border-bottom: 0px;
+  margin-bottom: 0px;
+}
+
+.list--item_book:after{
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  height: 0;
+}
+
+.button {
+  display: inline-block;
+  height: 30px;
+  background-color: #632B30;
+  text-align: center;
+  line-height: 30px;
+  color: #fff;
+  border-radius: 15px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 12px;
+  padding: 0 10px;
+  text-align: left;
+  min-width: 80px;
+}
+
+.button:hover {
+  background: #6F1820;
+}
+
+.button .fa {
+  margin-right: 5px;
+}
+
+.button--inverted {
+  min-width: 0;
+  background-color: transparent;
+  color: #FFF;
+  border: 1px solid #632B30;
+}
+
+.button--inverted:hover {
+  background-color: #333;
+}
