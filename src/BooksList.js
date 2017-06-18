@@ -8,8 +8,8 @@ const BookList = props => (
       <Book key={book.name} name={book.name} author={book.author} />
     ))}
 
-    <div style="text-align:center; margin: 10px;">
-    <div className="button button-inverted">close list of books</div>
+    <div style={{ textAlign: 'center', margin: '10px' }}>
+      <div className="button button-inverted">close list of books</div>
     </div>
   </div>
 );

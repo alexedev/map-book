@@ -12,29 +12,6 @@ export default class Map extends React.Component {
       places: null,
     };
   }
-  componentWillMount() {
-    if (this.props.match.params.cityName === 'London') {
-      fetch('http://ea0a38c5.ngrok.io/places', {
-        method: 'GET',
-        headers: {
-          Accept: 'application/json',
-        },
-      }).then(response => {
-        response.json().then(json => {
-          this.setState(
-            {
-              places: json.filter(
-                place => place.city === this.props.match.params.cityName,
-              ),
-            },
-            () => {
-              console.log(this.state.places);
-            },
-          );
-        });
-      });
-    }
-  }
   componentDidMount() {
     fetch(
       `https://maps.googleapis.com/maps/api/geocode/json?address=${this.props.match.params.cityName}&key=${API_KEY}`,
@@ -61,6 +38,7 @@ export default class Map extends React.Component {
               },
             }).then(response => {
               response.json().then(json => {
+                console.log(json);
                 this.setState(
                   {
                     places: json.filter(
