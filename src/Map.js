@@ -22,6 +22,7 @@ export default class Map extends React.Component {
           this.map = new google.maps.Map(this.refs.map, {
             center: location,
             zoom: 16,
+            scrollwheel: false,
           });
           var marker = new google.maps.Marker({
             position: location,
