@@ -129,7 +129,7 @@ export default class Map extends React.Component {
           {' '}
           {this.props.match.params.cityName}
           {' '}
-          from {this.state.price}
+          from {this.state.price} €
         </a>
       </div>
     );
